@@ -3,7 +3,19 @@ using UnityEngine;
 public class CatapultActivationScript : MonoBehaviour {
 
     private void Start() {
-        CatapultLaunchKinematic.LaunchVisualEvent += () => GetComponent<MeshRenderer>().enabled = !GetComponent<MeshRenderer>().enabled;
+        CatapultLaunchKinematic.LaunchVisualEvent += ToggleMeshRenderer;
+        CatapultLaunchImpulsiveForce.LaunchVisualEvent += ToggleMeshRenderer;
+    }
+
+    private void ToggleMeshRenderer() {
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+
+        meshRenderer.enabled = !meshRenderer.enabled;
+    }
+
+    private void OnDestroy() {
+        CatapultLaunchKinematic.LaunchVisualEvent -= ToggleMeshRenderer;
+        CatapultLaunchImpulsiveForce.LaunchVisualEvent -= ToggleMeshRenderer;
     }
 
 }

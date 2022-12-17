@@ -10,6 +10,8 @@ public class BasicTorque : MonoBehaviour {
 
     private void Start() {
         rb.centerOfMass = new Vector3(0, 0, 0);
+
+        Debug.Log(rb.inertiaTensor.magnitude);
     }
 
     private void Update() {
@@ -22,8 +24,6 @@ public class BasicTorque : MonoBehaviour {
         if (Input.GetMouseButton(0)) {
             rb.AddTorque(transform.forward * torque);
         }
-
-        Debug.Log(rb.GetRelativePointVelocity(new Vector3(0, 0.5f, 0)).magnitude);
     }
 
 }
