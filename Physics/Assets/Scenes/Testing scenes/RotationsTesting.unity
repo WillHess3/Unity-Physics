@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750d2c1249075f94595d0dcc5ada9e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: 1
+  torque: 10
   rb: {fileID: 954516826}
 --- !u!54 &954516826
 Rigidbody:
@@ -359,7 +359,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954516823}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -475,7 +475,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999905424}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750d2c1249075f94595d0dcc5ada9e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: 0.25
+  torque: 1
   rb: {fileID: 1999905426}
 --- !u!114 &1999905432
 MonoBehaviour:

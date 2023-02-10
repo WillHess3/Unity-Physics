@@ -13,7 +13,7 @@ public class CatapultLaunchKinematic : MonoBehaviour {
     private Vector2 _initialVelocity;
     private Vector2 _initialPosition;
     private float _time;
-    private bool _isInAir;
+    private bool _isLaunched;
 
     public static event Action LaunchVisualEvent;
 
@@ -23,23 +23,23 @@ public class CatapultLaunchKinematic : MonoBehaviour {
         _initialVelocity = new Vector2(Mathf.Cos(_angle * Mathf.PI / 180), Mathf.Sin(_angle * Mathf.PI / 180)) * _power;
         _initialPosition = new Vector2(_rock.position.x, _rock.position.y);
 
-        _isInAir = true;
+        _isLaunched = true;
     }
 
-    private float KinematicEquation(float acceleration, float velocity, float position) {
-        return 0.5f * acceleration * _time * _time + velocity * _time + position;
+    private float KinematicEquation(float acceleration, float velocity, float position, float time) {
+        return 0.5f * acceleration * time * time + velocity * time + position;
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && !_isLaunched) {
             Launch();
         }
 
-        if (_isInAir) {
+        if (_isLaunched) {
             _time += Time.deltaTime;
 
-            float newRockX = KinematicEquation(0, _initialVelocity.x, _initialPosition.x);
-            float newRockY = KinematicEquation(-9.81f, _initialVelocity.y, _initialPosition.y);
+            float newRockX = KinematicEquation(0, _initialVelocity.x, _initialPosition.x, _time);
+            float newRockY = KinematicEquation(-9.81f, _initialVelocity.y, _initialPosition.y, _time);
 
             _rock.position = new Vector3(newRockX, newRockY, _rock.position.z);
         }

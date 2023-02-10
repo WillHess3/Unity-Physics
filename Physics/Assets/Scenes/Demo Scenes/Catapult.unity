@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rock: {fileID: 1087731557}
-  _angle: 29.6
+  _angle: 85.1
   _power: 25
 --- !u!4 &189125425
 Transform:

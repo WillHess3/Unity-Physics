@@ -11,6 +11,8 @@ public class CarBreak : MonoBehaviour {
 
     private bool _isBreaking;
 
+    private Vector3 _stopPosition;
+    
     private bool IsCarStopped() {
         if (_rigidbody.velocity.x <= 0.01f && _isBreaking) {
             _rigidbody.velocity = Vector3.zero;
@@ -20,7 +22,6 @@ public class CarBreak : MonoBehaviour {
             return false;
         }
     }
-    private Vector3 _stopPosition;
 
     private float GetEquilibriumForceMagnitude(float angle) {
         return _rigidbody.mass * -1 * Physics.gravity.y * Mathf.Sin(-1 * angle);

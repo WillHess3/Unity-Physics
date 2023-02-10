@@ -386,7 +386,7 @@ MonoBehaviour:
   - {fileID: 14918220}
   - {fileID: 316522500}
   - {fileID: 1692941739}
-  torque: 10
+  torque: 1
 --- !u!4 &567405999
 Transform:
   m_ObjectHideFlags: 0

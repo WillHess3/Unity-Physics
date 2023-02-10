@@ -625,10 +625,10 @@ MonoBehaviour:
   _perfectlyInelasticBoxes:
   - {fileID: 1776504594}
   - {fileID: 1161182598}
-  _box1InitialVelocity: 2
+  _box1InitialVelocity: 1
   _box2InitialVelocity: -1
-  _box1mass: 10
-  _box2mass: 10
+  _box1mass: 1
+  _box2mass: 1
 --- !u!4 &1047880709
 Transform:
   m_ObjectHideFlags: 0

@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d406789e5afcc4fba1d4d73f9bfbc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coefficientOfFriction: 0.57
+  _coefficientOfFriction: 0.58
   _physicsMaterial: {fileID: 13400000, guid: 6bf6d4e35581e9040b0e3c93c0ae7921, type: 2}
 --- !u!4 &932781930
 Transform:

@@ -377,7 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialAngle: 0
   _initialAngularVelocity: 5
-  _initialAngularAcceleration: 10
+  _initialAngularAcceleration: 100
   _isInRadians: 0
 --- !u!54 &1791171605
 Rigidbody:
